@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HexaDecimal</title>
+    </head>
+
+    <body>
+        <label> Enter any  number : </label> <br> <br>
+        <input id="number"> <br> <br>
+        <p id="show"></p>
+        <button type="button" onclick="octal()"> Check </button>
+        <script>
+            const octal = () => {
+                let n = document.getElementById("number").value;
+                let dec  ;
+                dec = parseInt(n,16);
+               
+                document.getElementById("show").innerHTML = dec;
+                   
+            }
+            
+        </script>
+    </body>
+
+</html>

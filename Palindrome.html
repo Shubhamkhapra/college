@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Palindrome</title>
+    </head>
+
+    <body>
+        <label> Enter any  number : </label> <br> <br>
+        <input id="number"> <br> <br>
+        <p id="show"></p>
+        <button type="button" onclick="pal()"> Check </button>
+        <script>
+            const pal = () => {
+                let n = Number(document.getElementById("number").value);
+                let rev = 0,
+                    rem = 0,
+                    original;
+                original = n;
+                while (n > 0) {
+                    rem = n % 10;
+                    rev = (rev * 10) + rem;
+                    n = parseInt(n / 10);
+                }
+                if (rev == original)
+                    return document.getElementById("show").innerHTML = "Palindrome";
+                else
+                    return document.getElementById("show").innerHTML = "Not Palindrome";
+            }
+            
+        </script>
+    </body>
+
+</html>
